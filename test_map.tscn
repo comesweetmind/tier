@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=4 uid="uid://cftijqtbrdxoe"]
+[gd_scene load_steps=13 format=4 uid="uid://cftijqtbrdxoe"]
 
 [ext_resource type="PackedScene" uid="uid://bp4uhrlmvhcbw" path="res://character/character.tscn" id="1_4qc02"]
 [ext_resource type="Texture2D" uid="uid://dvaaj0msfo4af" path="res://Coin_Silver-Sheet.png" id="3_s02eq"]
 [ext_resource type="Texture2D" uid="uid://orc2uw71obdb" path="res://tilemap/Water.png" id="3_t8dge"]
+[ext_resource type="Texture2D" uid="uid://cx65ftkwmp8or" path="res://Спрайт-0002.png" id="4_qgarv"]
 [ext_resource type="Texture2D" uid="uid://dp4h8jayld8am" path="res://icon.svg" id="4_t8dge"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s02eq"]
@@ -40,7 +41,7 @@ func _on_body_entered(body: Node2D) -> void:
 [sub_resource type="CircleShape2D" id="CircleShape2D_t8dge"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t8dge"]
-size = Vector2(136, 136)
+size = Vector2(16, 16)
 
 [sub_resource type="GDScript" id="GDScript_t8dge"]
 script/source = "extends Area2D
@@ -114,14 +115,267 @@ scale = Vector2(0.15625, 0.15625)
 texture = ExtResource("3_s02eq")
 
 [node name="WWall" type="StaticBody2D" parent="."]
-position = Vector2(354, 521)
+position = Vector2(416, 567)
 collision_layer = 5
 collision_mask = 5
 
 [node name="Sprite2D" type="Sprite2D" parent="WWall"]
-texture = ExtResource("4_t8dge")
+texture = ExtResource("4_qgarv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WWall"]
+shape = SubResource("RectangleShape2D_t8dge")
+
+[node name="WWall2" type="StaticBody2D" parent="."]
+position = Vector2(416, 551)
+collision_layer = 5
+collision_mask = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="WWall2"]
+texture = ExtResource("4_qgarv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WWall2"]
+shape = SubResource("RectangleShape2D_t8dge")
+
+[node name="WWall3" type="StaticBody2D" parent="."]
+position = Vector2(416, 455)
+collision_layer = 5
+collision_mask = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="WWall3"]
+texture = ExtResource("4_qgarv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WWall3"]
+shape = SubResource("RectangleShape2D_t8dge")
+
+[node name="WWall4" type="StaticBody2D" parent="."]
+position = Vector2(416, 471)
+collision_layer = 5
+collision_mask = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="WWall4"]
+texture = ExtResource("4_qgarv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WWall4"]
+shape = SubResource("RectangleShape2D_t8dge")
+
+[node name="WWall5" type="StaticBody2D" parent="."]
+position = Vector2(416, 487)
+collision_layer = 5
+collision_mask = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="WWall5"]
+texture = ExtResource("4_qgarv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WWall5"]
+shape = SubResource("RectangleShape2D_t8dge")
+
+[node name="WWall6" type="StaticBody2D" parent="."]
+position = Vector2(416, 503)
+collision_layer = 5
+collision_mask = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="WWall6"]
+texture = ExtResource("4_qgarv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WWall6"]
+shape = SubResource("RectangleShape2D_t8dge")
+
+[node name="WWall7" type="StaticBody2D" parent="."]
+position = Vector2(416, 519)
+collision_layer = 5
+collision_mask = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="WWall7"]
+texture = ExtResource("4_qgarv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WWall7"]
+shape = SubResource("RectangleShape2D_t8dge")
+
+[node name="WWall8" type="StaticBody2D" parent="."]
+position = Vector2(416, 535)
+collision_layer = 5
+collision_mask = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="WWall8"]
+texture = ExtResource("4_qgarv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WWall8"]
+shape = SubResource("RectangleShape2D_t8dge")
+
+[node name="WWall9" type="StaticBody2D" parent="."]
+position = Vector2(461, 568)
+collision_layer = 5
+collision_mask = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="WWall9"]
+texture = ExtResource("4_qgarv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WWall9"]
+shape = SubResource("RectangleShape2D_t8dge")
+
+[node name="WWall10" type="StaticBody2D" parent="."]
+position = Vector2(461, 552)
+collision_layer = 5
+collision_mask = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="WWall10"]
+texture = ExtResource("4_qgarv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WWall10"]
+shape = SubResource("RectangleShape2D_t8dge")
+
+[node name="WWall11" type="StaticBody2D" parent="."]
+position = Vector2(461, 456)
+collision_layer = 5
+collision_mask = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="WWall11"]
+texture = ExtResource("4_qgarv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WWall11"]
+shape = SubResource("RectangleShape2D_t8dge")
+
+[node name="WWall12" type="StaticBody2D" parent="."]
+position = Vector2(461, 472)
+collision_layer = 5
+collision_mask = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="WWall12"]
+texture = ExtResource("4_qgarv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WWall12"]
+shape = SubResource("RectangleShape2D_t8dge")
+
+[node name="WWall13" type="StaticBody2D" parent="."]
+position = Vector2(461, 488)
+collision_layer = 5
+collision_mask = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="WWall13"]
+texture = ExtResource("4_qgarv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WWall13"]
+shape = SubResource("RectangleShape2D_t8dge")
+
+[node name="WWall14" type="StaticBody2D" parent="."]
+position = Vector2(461, 504)
+collision_layer = 5
+collision_mask = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="WWall14"]
+texture = ExtResource("4_qgarv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WWall14"]
+shape = SubResource("RectangleShape2D_t8dge")
+
+[node name="WWall15" type="StaticBody2D" parent="."]
+position = Vector2(461, 520)
+collision_layer = 5
+collision_mask = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="WWall15"]
+texture = ExtResource("4_qgarv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WWall15"]
+shape = SubResource("RectangleShape2D_t8dge")
+
+[node name="WWall16" type="StaticBody2D" parent="."]
+position = Vector2(461, 536)
+collision_layer = 5
+collision_mask = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="WWall16"]
+texture = ExtResource("4_qgarv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WWall16"]
+shape = SubResource("RectangleShape2D_t8dge")
+
+[node name="WWall17" type="StaticBody2D" parent="."]
+position = Vector2(570, 569)
+collision_layer = 5
+collision_mask = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="WWall17"]
+texture = ExtResource("4_qgarv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WWall17"]
+shape = SubResource("RectangleShape2D_t8dge")
+
+[node name="WWall18" type="StaticBody2D" parent="."]
+position = Vector2(570, 553)
+collision_layer = 5
+collision_mask = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="WWall18"]
+texture = ExtResource("4_qgarv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WWall18"]
+shape = SubResource("RectangleShape2D_t8dge")
+
+[node name="WWall19" type="StaticBody2D" parent="."]
+position = Vector2(570, 457)
+collision_layer = 5
+collision_mask = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="WWall19"]
+texture = ExtResource("4_qgarv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WWall19"]
+shape = SubResource("RectangleShape2D_t8dge")
+
+[node name="WWall20" type="StaticBody2D" parent="."]
+position = Vector2(570, 473)
+collision_layer = 5
+collision_mask = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="WWall20"]
+texture = ExtResource("4_qgarv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WWall20"]
+shape = SubResource("RectangleShape2D_t8dge")
+
+[node name="WWall21" type="StaticBody2D" parent="."]
+position = Vector2(570, 489)
+collision_layer = 5
+collision_mask = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="WWall21"]
+texture = ExtResource("4_qgarv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WWall21"]
+shape = SubResource("RectangleShape2D_t8dge")
+
+[node name="WWall22" type="StaticBody2D" parent="."]
+position = Vector2(570, 505)
+collision_layer = 5
+collision_mask = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="WWall22"]
+texture = ExtResource("4_qgarv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WWall22"]
+shape = SubResource("RectangleShape2D_t8dge")
+
+[node name="WWall23" type="StaticBody2D" parent="."]
+position = Vector2(570, 521)
+collision_layer = 5
+collision_mask = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="WWall23"]
+texture = ExtResource("4_qgarv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WWall23"]
+shape = SubResource("RectangleShape2D_t8dge")
+
+[node name="WWall24" type="StaticBody2D" parent="."]
+position = Vector2(570, 537)
+collision_layer = 5
+collision_mask = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="WWall24"]
+texture = ExtResource("4_qgarv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WWall24"]
 shape = SubResource("RectangleShape2D_t8dge")
 
 [node name="Wall" type="Area2D" parent="."]
