@@ -1,18 +1,20 @@
 [gd_scene load_steps=4 format=3 uid="uid://devcpaaaitjj8"]
 
 [ext_resource type="Script" uid="uid://ditmohbi6fhb" path="res://bullet.gd" id="1_v8qja"]
-[ext_resource type="Texture2D" uid="uid://dp4h8jayld8am" path="res://icon.svg" id="2_t4vbm"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_v8qja"]
-size = Vector2(26, 4)
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_v7oki"]
+load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v8qja"]
+radius = 2.0
 
 [node name="bullet" type="CharacterBody2D"]
 collision_mask = 6
 script = ExtResource("1_v8qja")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.203125, 0.03125)
-texture = ExtResource("2_t4vbm")
+scale = Vector2(0.03125, 0.03125)
+texture = SubResource("CompressedTexture2D_v7oki")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_v8qja")
+shape = SubResource("CircleShape2D_v8qja")

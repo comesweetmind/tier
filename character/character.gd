@@ -1,9 +1,9 @@
 extends CharacterBody2D
 
 @export var SPEED = 200
+@onready var animated_sprite = $AnimatedSprite2D  # подключаем AnimatedSprite2D
+
 var BULLET = 4
-
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -41,5 +41,20 @@ func _physics_process(delta: float) -> void:
 	velocity = direction * SPEED
 	
 	#print(velocity)
-
+	if direction != Vector2.ZERO:
+		if direction.y < 0:
+			animated_sprite.play("Walk_top")
+		elif direction.y > 0:
+			animated_sprite.play("Walk_down")
+		elif direction.x < 0:
+			animated_sprite.flip_h = true
+			animated_sprite.play("Walk_left")  # или "Walk_side"
+		elif direction.x > 0:
+			animated_sprite.flip_h = false
+			animated_sprite.play("Walk_left")  # тот же спрайт, но зеркально
+	else:
+		animated_sprite.play("Idle")
+	
 	move_and_slide()
+	
+	
