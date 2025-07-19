@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://orc2uw71obdb"
-path="res://.godot/imported/Water.png-b5ef0e7e082a400453c5eadbf13a45d4.ctex"
+uid="uid://b6bu0y8b31eh3"
+path="res://.godot/imported/StinkySkunk.png-b2bd5ec9c3c3e20bb706168c9b7b47cc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tilemap/Water.png"
-dest_files=["res://.godot/imported/Water.png-b5ef0e7e082a400453c5eadbf13a45d4.ctex"]
+source_file="res://assets/animals/StinkySkunk.png"
+dest_files=["res://.godot/imported/StinkySkunk.png-b2bd5ec9c3c3e20bb706168c9b7b47cc.ctex"]
 
 [params]
 

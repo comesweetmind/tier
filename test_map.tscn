@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bp4uhrlmvhcbw" path="res://character/character.tscn" id="1_4qc02"]
 [ext_resource type="Texture2D" uid="uid://dvaaj0msfo4af" path="res://Coin_Silver-Sheet.png" id="3_s02eq"]
-[ext_resource type="Texture2D" uid="uid://orc2uw71obdb" path="res://tilemap/Water.png" id="3_t8dge"]
+[ext_resource type="Texture2D" uid="uid://orc2uw71obdb" path="res://assets/tilemap/Water.png" id="3_t8dge"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s02eq"]
 texture = ExtResource("3_t8dge")
@@ -141,7 +141,6 @@ func _on_body_entered(body: Node2D) -> void:
 size = Vector2(56, 140)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_v7oki"]
-load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_s02eq"]
 load_path = "res://.godot/imported/Спрайт-0002.png-e7ff0e676c230e9b4fedeb647d708807.ctex"

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbgmnkg7ykvae"
-path="res://.godot/imported/Grass.png-0df2701507472e22f538924bc70a9dc6.ctex"
+uid="uid://s82ol870d6qg"
+path="res://.godot/imported/MeowingCat.png-29e8f7077354fd582cd9b24e361c42ea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tilemap/Grass.png"
-dest_files=["res://.godot/imported/Grass.png-0df2701507472e22f538924bc70a9dc6.ctex"]
+source_file="res://assets/animals/MeowingCat.png"
+dest_files=["res://.godot/imported/MeowingCat.png-29e8f7077354fd582cd9b24e361c42ea.ctex"]
 
 [params]
 
