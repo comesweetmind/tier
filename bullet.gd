@@ -2,9 +2,11 @@ extends CharacterBody2D
 class_name Bullet
 
 var pos: Vector2
-var speed := 300
+var speed := 250
 var dir: float
 var rota: float
+var touch = 3
+
 
 func _ready():
 	global_position = pos

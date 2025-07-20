@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcmo63652gxnm"]
+
+[ext_resource type="Texture2D" uid="uid://75womgnqjgy3" path="res://assets/Fences.png" id="1_xxgf6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_clg6b"]
+size = Vector2(11.5, 88)
+
+[node name="wall" type="StaticBody2D"]
+collision_layer = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.25, 0.146)
+scale = Vector2(2.083, 2.071)
+texture = ExtResource("1_xxgf6")
+region_enabled = true
+region_rect = Rect2(5, 1, 6, 43)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.24999, 9.53674e-07)
+shape = SubResource("RectangleShape2D_clg6b")

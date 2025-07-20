@@ -184,21 +184,21 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pjt0s"]
-radius = 15.0
-height = 38.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ugqs2"]
+size = Vector2(27, 43)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_pjt0s")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(4.76837e-07, -1)
-scale = Vector2(2.25781, 2.25781)
+position = Vector2(0, -2)
+scale = Vector2(2.97275, 2.97275)
 sprite_frames = SubResource("SpriteFrames_o6jyn")
 animation = &"Walk_right"
 autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_pjt0s")
+position = Vector2(-1.5, -2.5)
+shape = SubResource("RectangleShape2D_ugqs2")
 
 [node name="Gun" parent="." instance=ExtResource("3_ugqs2")]
