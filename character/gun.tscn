@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cod5lu2lmn0p1"]
 
-[ext_resource type="Script" uid="uid://ck734cfeq5heq" path="res://gun.gd" id="1_dk5gl"]
-[ext_resource type="Texture2D" uid="uid://s8pddv0sfkuo" path="res://[design]_Sniper_rifle_[KAR98]_V1.00.png" id="2_kw0bs"]
+[ext_resource type="Script" uid="uid://ck734cfeq5heq" path="res://character/gun.gd" id="1_dk5gl"]
+[ext_resource type="Texture2D" uid="uid://s8pddv0sfkuo" path="res://assets/[design]_Sniper_rifle_[KAR98]_V1.00.png" id="2_kw0bs"]
 
 [node name="Gun" type="Node2D"]
 script = ExtResource("1_dk5gl")

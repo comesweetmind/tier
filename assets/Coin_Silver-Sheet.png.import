@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqkfyw3criutt"
-path="res://.godot/imported/logo_large_color_light.png-d04349b779188b384833a3b999aa6512.ctex"
+uid="uid://dvaaj0msfo4af"
+path="res://.godot/imported/Coin_Silver-Sheet.png-fa485bf8b1cfaca475e118f81f87bfdd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://logo_large_color_light.png"
-dest_files=["res://.godot/imported/logo_large_color_light.png-d04349b779188b384833a3b999aa6512.ctex"]
+source_file="res://assets/Coin_Silver-Sheet.png"
+dest_files=["res://.godot/imported/Coin_Silver-Sheet.png-fa485bf8b1cfaca475e118f81f87bfdd.ctex"]
 
 [params]
 

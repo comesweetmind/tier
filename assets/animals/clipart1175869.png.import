@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvaaj0msfo4af"
-path="res://.godot/imported/Coin_Silver-Sheet.png-a4e314082eb8c9801c4bb83c645fa94a.ctex"
+uid="uid://ck3hgkrk1sv3"
+path="res://.godot/imported/clipart1175869.png-657054885a05548191410ae370d7477d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Coin_Silver-Sheet.png"
-dest_files=["res://.godot/imported/Coin_Silver-Sheet.png-a4e314082eb8c9801c4bb83c645fa94a.ctex"]
+source_file="res://assets/animals/clipart1175869.png"
+dest_files=["res://.godot/imported/clipart1175869.png-657054885a05548191410ae370d7477d.ctex"]
 
 [params]
 

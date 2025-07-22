@@ -2,16 +2,15 @@ extends CharacterBody2D
 
 @export var SPEED = 200
 @onready var animated_sprite = $AnimatedSprite2D  # подключаем AnimatedSprite2D
-var bullets = 4
+@onready var gun = $Gun
 
-var bullet_scene = "res://bullet.tscn"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
+	pass
+	
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("shoot"):
-		shoot_bullet()
+	var bullets = gun.bullets
+
 # Отримуємо глобальну позицію курсора
 	#var mouse_pos = get_global_mouse_position()
 	# Обчислюємо напрямок від гравця до миші
@@ -58,15 +57,6 @@ func _physics_process(delta: float) -> void:
 		animated_sprite.play("Idle")
 	
 	move_and_slide()
-
-
-func shoot_bullet():
-	var bullet = bullet_scene.instantiate()
-	
-	get_tree().current_scene.add_child(bullet)
-	bullet.global_position = global_position
-	bullet.rotation = rotation
-	bullets.append(bullet)
 
 	
 	

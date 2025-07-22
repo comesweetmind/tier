@@ -1,5 +1,7 @@
 res://lvl_1.tscn
-res://bullet.tscn
-res://bullet.gd
-res://wall.tscn
-res://character/character.gd
+res://gun.tscn
+res://hub.tscn
+res://arena/lvl_1.tscn
+res://character/gun.tscn
+res://arena/hub.tscn
+res://character/gun.gd
