@@ -4,11 +4,13 @@ extends Node2D
 @onready var muzzle = $Marker2D
 
 @export var max_bullets := 4 # за 4 постріли
+@export var can_shoot := true  # ← Додаємо змінну
+
 var bullets := max_bullets # за 4 постріли
 
 func _process(delta: float) -> void:
 	# Якщо є патрони і натиснута кнопка — стріляємо
-	if bullets > 0 and Input.is_action_just_pressed("shoot"): # за 4 постріли
+	if can_shoot == true and bullets > 0 and Input.is_action_just_pressed("shoot"): # за 4 постріли
 		fire()
 		
 func _physics_process(delta: float) -> void:
@@ -16,7 +18,6 @@ func _physics_process(delta: float) -> void:
 
 func fire():
 	bullets -= 1  # за 4 постріли віднімаємо 1 кулю
-	#print("🔫 Постріл! Залишилось:", bullets) # за 4 постріли
 
 	var bullet = bullet_path.instantiate()
 		# Ставимо кулю в Marker2D

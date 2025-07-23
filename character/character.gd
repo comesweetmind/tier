@@ -1,4 +1,7 @@
 extends CharacterBody2D
+#enum {
+	#MOVE,
+#}
 
 @export var SPEED = 200
 @onready var animated_sprite = $AnimatedSprite2D  # подключаем AnimatedSprite2D
@@ -9,6 +12,7 @@ func _ready() -> void:
 	pass
 	
 func _process(delta: float) -> void:
+	
 	var bullets = gun.bullets
 
 # Отримуємо глобальну позицію курсора

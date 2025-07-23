@@ -1,11 +1,12 @@
 extends CharacterBody2D
 class_name Bullet
+@onready var tween = create_tween()
 
 var pos: Vector2
 var speed := 250
 var dir: float
 var rota: float
-var touch = 3
+var touch = 4
 
 
 func _ready():
@@ -16,5 +17,13 @@ func _ready():
 func _physics_process(delta: float) -> void:
 	var collision = move_and_collide(velocity * delta)
 	if collision:
-		velocity = velocity.bounce(collision.get_normal())
+		touch -= 1
+		if touch <= 0:
+			call_deferred("queue_free")
+		else:
+			change_color_smooth()
+			velocity = velocity.bounce(collision.get_normal())
+		
 	
+func change_color_smooth():
+	tween.tween_property(self, "modulate", Color(1, 0, 0), 0.5)  # до червоного за 0.5 секунди
