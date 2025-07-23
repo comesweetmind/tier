@@ -118,7 +118,7 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	call_deferred(\"queue_free\")
-	body.call_deferred(\"queue_free\")
+	body.queue_free()
 "
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_okdh5"]
