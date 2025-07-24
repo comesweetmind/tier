@@ -1,19 +1,19 @@
 [gd_scene load_steps=4 format=3 uid="uid://devcpaaaitjj8"]
 
 [ext_resource type="Script" uid="uid://ditmohbi6fhb" path="res://character/bullet.gd" id="1_v8qja"]
-[ext_resource type="Texture2D" uid="uid://cnvypje524r76" path="res://assets/clipart1298390.png" id="2_v8qja"]
+[ext_resource type="Texture2D" uid="uid://cvk58gf6mrs78" path="res://character/pokeboll.png" id="2_bsyac"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_t4vbm"]
-radius = 5.0
+radius = 7.0
 
 [node name="bullet" type="CharacterBody2D"]
 collision_mask = 6
 script = ExtResource("1_v8qja")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.19209e-07, 0)
+scale = Vector2(0.029724, 0.0294737)
+texture = ExtResource("2_bsyac")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_t4vbm")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-self_modulate = Color(0.458824, 1, 0.227451, 1)
-scale = Vector2(0.0280112, 0.0280112)
-texture = ExtResource("2_v8qja")

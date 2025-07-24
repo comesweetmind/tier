@@ -7,6 +7,7 @@ var speed := 250
 var dir: float
 var rota: float
 var touch = 4
+var collor = 1
 
 
 func _ready():
@@ -17,7 +18,10 @@ func _ready():
 func _physics_process(delta: float) -> void:
 	var collision = move_and_collide(velocity * delta)
 	if collision:
+		change_color_smooth()
 		touch -= 1
+		collor += 1
+		
 		if touch <= 0:
 			call_deferred("queue_free")
 		else:
@@ -26,4 +30,9 @@ func _physics_process(delta: float) -> void:
 		
 	
 func change_color_smooth():
-	tween.tween_property(self, "modulate", Color(1, 0, 0), 0.5)  # до червоного за 0.5 секунди
+	if collor == 2:
+		$Sprite2D.self_modulate = Color(0, 1, 0)
+	if collor == 3:
+		$Sprite2D.self_modulate = Color(1, 1, 0)
+	if collor == 4:
+		$Sprite2D.self_modulate = Color(1, 0, 0)
