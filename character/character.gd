@@ -8,8 +8,8 @@ extends CharacterBody2D
 @onready var gun = $Gun
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	print(gun.bullets)
+#func _ready() -> void:
+	#print(gun.bullets)
 	
 func _process(delta: float) -> void:
 	
