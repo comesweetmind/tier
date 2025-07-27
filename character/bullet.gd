@@ -11,6 +11,7 @@ var collor = 1
 
 
 func _ready():
+	add_to_group("bullets")
 	global_position = pos
 	global_rotation = rota
 	velocity = Vector2(speed, 0).rotated(dir)
@@ -36,3 +37,6 @@ func change_color_smooth():
 		$Sprite2D.self_modulate = Color(1, 1, 0)
 	if collor == 4:
 		$Sprite2D.self_modulate = Color(1, 0, 0)
+		
+		
+		

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmp7nlpactiio"
-path="res://.godot/imported/play_zone.png-998d2759d12f19de6797026e1d274ed9.ctex"
+uid="uid://cssxtuej280r0"
+path="res://.godot/imported/Exit_zone.png-5ecb0f0dc9b4ef499733c5cc53690713.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://arena/play_zone.png"
-dest_files=["res://.godot/imported/play_zone.png-998d2759d12f19de6797026e1d274ed9.ctex"]
+source_file="res://arena/Exit_zone.png"
+dest_files=["res://.godot/imported/Exit_zone.png-5ecb0f0dc9b4ef499733c5cc53690713.ctex"]
 
 [params]
 

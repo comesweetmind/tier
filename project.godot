@@ -11,8 +11,12 @@ config_version=5
 [application]
 
 config/name="tier"
-run/main_scene="uid://cftijqtbrdxoe"
+run/main_scene="uid://7kf2lr283jpi"
 config/features=PackedStringArray("4.4", "Mobile")
+
+[autoload]
+
+GameData="*res://game_data.gd"
 
 [display]
 

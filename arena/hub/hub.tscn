@@ -1,16 +1,21 @@
-[gd_scene load_steps=9 format=4 uid="uid://7kf2lr283jpi"]
+[gd_scene load_steps=12 format=4 uid="uid://7kf2lr283jpi"]
 
 [ext_resource type="Texture2D" uid="uid://bfs6v6feev0fc" path="res://arena/interiors_demo.png" id="1_toenn"]
 [ext_resource type="PackedScene" uid="uid://bp4uhrlmvhcbw" path="res://character/character.tscn" id="2_m25vb"]
-[ext_resource type="Texture2D" uid="uid://dmp7nlpactiio" path="res://arena/play_zone.png" id="3_m25vb"]
+[ext_resource type="Texture2D" uid="uid://dmp7nlpactiio" path="res://arena/hub/play_zone.png" id="3_m25vb"]
+[ext_resource type="Texture2D" uid="uid://mqh0qpabr3bc" path="res://arena/hub/gun_zone.png" id="4_5aper"]
+[ext_resource type="Texture2D" uid="uid://dn7kmw4qys8mk" path="res://arena/hub/grind_zone.png" id="5_ssbo3"]
+[ext_resource type="Texture2D" uid="uid://1tpv35xklrmi" path="res://arena/hub/equi_zone.png" id="6_6fpkw"]
 
 [sub_resource type="GDScript" id="GDScript_toenn"]
 script/source = "extends Node2D
 
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$CharacterBody2D/Gun.can_shoot = false
+	print(GameData.captured_monsters)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -218,19 +223,65 @@ tile_map_data = PackedByteArray("AAAAAAAAAQABAAAAAAABAAAAAQABAAAAAAABAAEAAQABAAE
 tile_set = SubResource("TileSet_6eldl")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_m25vb")]
-position = Vector2(41, 47)
+position = Vector2(217, 70)
 
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2(327, 56)
+[node name="Play_zone" type="Area2D" parent="."]
+position = Vector2(432, 70)
+scale = Vector2(2.52632, 2.38462)
 script = SubResource("GDScript_u20ox")
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+[node name="Sprite2D" type="Sprite2D" parent="Play_zone"]
 position = Vector2(14, 6)
 scale = Vector2(0.0525424, 0.0525424)
 texture = ExtResource("3_m25vb")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Play_zone"]
 position = Vector2(14, 6)
 shape = SubResource("RectangleShape2D_6bew6")
 
-[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[node name="Gun_zone" type="Area2D" parent="."]
+position = Vector2(445, 210)
+scale = Vector2(2.19556, 4.36037)
+
+[node name="Sprite2D" type="Sprite2D" parent="Gun_zone"]
+position = Vector2(14, 6)
+scale = Vector2(0.0525424, 0.0525424)
+texture = ExtResource("4_5aper")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gun_zone"]
+position = Vector2(14, 6)
+shape = SubResource("RectangleShape2D_6bew6")
+
+[node name="Grind_zone" type="Area2D" parent="."]
+position = Vector2(171, 325)
+scale = Vector2(3.48545, 2.22222)
+
+[node name="Sprite2D" type="Sprite2D" parent="Grind_zone"]
+position = Vector2(14, 6)
+scale = Vector2(0.0525424, 0.0525424)
+texture = ExtResource("5_ssbo3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grind_zone"]
+position = Vector2(14, 6)
+shape = SubResource("RectangleShape2D_6bew6")
+
+[node name="Equip_zone3" type="Area2D" parent="."]
+position = Vector2(12, 229)
+scale = Vector2(1.37979, 3.47603)
+
+[node name="Sprite2D" type="Sprite2D" parent="Equip_zone3"]
+position = Vector2(14, 6)
+scale = Vector2(0.0525424, 0.0525424)
+texture = ExtResource("6_6fpkw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Equip_zone3"]
+position = Vector2(14, 6)
+shape = SubResource("RectangleShape2D_6bew6")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(311, 64)
+zoom = Vector2(2, 2)
+limit_left = 0
+limit_top = 0
+
+[connection signal="body_entered" from="Play_zone" to="Play_zone" method="_on_body_entered"]

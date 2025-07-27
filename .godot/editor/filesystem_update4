@@ -1,6 +1,2 @@
-res://character/bullet.tscn
-res://arena/hub.tscn
-res://character/bullet.gd
-res://character/gun.gd
-res://character/gun.tscn
 res://arena/lvl_1.tscn
+res://cryptid/test_cryptid.tscn
