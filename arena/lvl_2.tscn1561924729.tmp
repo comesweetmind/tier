@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://mghqatba6fon"]
+
+[ext_resource type="PackedScene" uid="uid://bp4uhrlmvhcbw" path="res://character/character.tscn" id="1_ly7mn"]
+
+[sub_resource type="GDScript" id="GDScript_ly7mn"]
+script/source = "extends Node2D
+
+var newMax = $Player.gun
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	print(newMax)
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="lvl_2" type="Node2D"]
+script = SubResource("GDScript_ly7mn")
+
+[node name="Player" parent="." instance=ExtResource("1_ly7mn")]
+position = Vector2(55, 53)
