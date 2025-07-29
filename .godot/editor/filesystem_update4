@@ -1,6 +1,4 @@
-res://cryptid/test_cryptid.tscn
-res://arena/hub/hub.tscn
 res://arena/lvl_2.tscn
-res://arena/lvl_1.tscn
-res://character/gun.tscn
-res://character/character.tscn
+res://data/bestiary.json
+res://data/bestiary.gd
+res://data/BestiaryUI.gd

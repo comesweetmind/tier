@@ -1,0 +1,24 @@
+"dsa":	{
+	"slime": {
+		"name": "Слизь",
+		"hp": 20,
+		"attack": 5,
+		"description": "Медленное, но липкое существо.",
+		"image": "res://assets/animals/clipart1175869.png"
+	},
+	"goblin": {
+		"name": "Гоблин",
+		"hp": 35,
+		"attack": 10,
+		"description": "Хитрый и быстрый враг.",
+		"image": "res://assets/animals/clipart1175869.png"
+	},
+	"fish": {
+		"name": "Риба",
+		"hp": 35,
+		"attack": 10,
+		"description": "вода.",
+		"image": "res://assets/animals/clipart1175869.png"
+	}
+
+}

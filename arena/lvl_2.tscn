@@ -10,9 +10,9 @@ var max_bullets = 6
 
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	gun.max_bullets += 999
-	print(\"MAX:\", gun.max_bullets) # має вивести 1005
+#func _ready() -> void:
+	#gun.max_bullets += 999
+	#print(\"MAX:\", gun.max_bullets) # має вивести 1005
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

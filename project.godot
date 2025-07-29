@@ -16,7 +16,8 @@ config/features=PackedStringArray("4.4", "Mobile")
 
 [autoload]
 
-GameData="*res://game_data.gd"
+GameData="*res://data/game_data.gd"
+Bestiary="*res://data/bestiary.gd"
 
 [display]
 
