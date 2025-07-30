@@ -3,10 +3,10 @@ extends Node2D
 @onready var bullet_path = preload("res://character/bullet.tscn")
 @onready var muzzle = $Marker2D
 
-@export var max_bullets := 4 # за 4 постріли
+@export var max_bullets = 4 # за 4 постріли
 @export var can_shoot := true  # ← Додаємо змінну
 
-var bullets := max_bullets # за 4 постріли
+var bullets = max_bullets # за 4 постріли
 
 func _process(delta: float) -> void:
 	# Якщо є патрони і натиснута кнопка — стріляємо

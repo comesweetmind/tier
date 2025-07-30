@@ -9,9 +9,9 @@ script/source = "extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var gun = $Player/Gun.max_bullets
-	gun = 999
-	print(\"MAX:\", gun) # має вивести 1005
+	var gun = $Player/Gun
+	gun.max_bullets = 999
+	print(\"MAX:\", gun.max_bullets) # має вивести 1005
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
