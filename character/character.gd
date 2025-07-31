@@ -13,7 +13,7 @@ extends CharacterBody2D
 	
 func _process(delta: float) -> void:
 	
-	var bullets = gun.bullets
+	var bullets = gun.magazine
 
 # Отримуємо глобальну позицію курсора
 	#var mouse_pos = get_global_mouse_position()
