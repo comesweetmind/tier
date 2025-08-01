@@ -13,7 +13,7 @@ func load_bestiary():
 	if file:
 		var text = file.get_as_text()
 		var dataBestiary = JSON.parse_string(text)
-		if typeof(dataBestiary) == TYPE_DICTIONARY:
-			print(dataBestiary) # Выведет словарь
-		else:
-			print("Ошибка парсинга JSON!")
+		#if typeof(dataBestiary) == TYPE_DICTIONARY:
+			#print(dataBestiary) # Выведет словарь
+		#else:
+			#print("Ошибка парсинга JSON!")

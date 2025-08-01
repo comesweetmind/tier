@@ -1,6 +1,1 @@
-res://arena/hub/hub.tscn
 res://arena/lvl_1.tscn
-res://character/bullet.tscn
-res://character/character.tscn
-res://character/gun.tscn
-res://data/guns_data.gd
