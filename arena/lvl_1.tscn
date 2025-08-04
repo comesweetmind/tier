@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://b54gw8vdw1x71"]
+[gd_scene load_steps=20 format=4 uid="uid://b54gw8vdw1x71"]
 
 [ext_resource type="Texture2D" uid="uid://orc2uw71obdb" path="res://assets/tilemap/Water.png" id="1_c37vy"]
 [ext_resource type="Texture2D" uid="uid://bbgmnkg7ykvae" path="res://assets/tilemap/Grass.png" id="1_ilk04"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://qgiaw2gy6pkq" path="res://wall_vertical.tscn" id="5_emd62"]
 [ext_resource type="PackedScene" uid="uid://dcmo63652gxnm" path="res://wall.tscn" id="6_jwhal"]
 [ext_resource type="Texture2D" uid="uid://75womgnqjgy3" path="res://assets/tilemap/Fences.png" id="7_jmadb"]
+[ext_resource type="PackedScene" uid="uid://u2ip6j8bubqx" path="res://interface.tscn" id="9_h6iaj"]
 [ext_resource type="Texture2D" uid="uid://cssxtuej280r0" path="res://arena/Exit_zone.png" id="9_jcwl6"]
 
 [sub_resource type="GDScript" id="GDScript_jcwl6"]
@@ -119,19 +120,29 @@ texture = ExtResource("1_ilk04")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_8t7b0")
 
-[sub_resource type="Curve2D" id="Curve2D_c37vy"]
+[sub_resource type="Curve2D" id="Curve2D_jcwl6"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 79, 2, 0, 0, 0, 0, 79, -30, 0, 0, 0, 0, -4, -35, 0, 0, 0, 0, 0, 0)
+"points": PackedVector2Array(0, 0, 0, 0, 178, 38, 0, 0, 0, 0, 178, 108)
 }
-point_count = 5
+point_count = 2
 
-[sub_resource type="GDScript" id="GDScript_c37vy"]
+[sub_resource type="GDScript" id="GDScript_emd62"]
 script/source = "extends PathFollow2D
 
 @export var speed: float = 100.0
+var direction: int = 1  # 1 = вперед, -1 = назад
+
+func _ready():
+	loop = false  # Вимикаємо зациклення
 
 func _process(delta: float):
-	progress += speed * delta
+	progress += speed * delta * direction
+
+	# Зміна напряму на кінцях шляху
+	if progress_ratio >= 1.0:
+		direction = -1
+	elif progress_ratio <= 0.0:
+		direction = 1
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bcbm8"]
@@ -186,21 +197,20 @@ limit_top = 0
 [node name="test-cryptid" parent="Animals" instance=ExtResource("4_c37vy")]
 position = Vector2(545, 111)
 
-[node name="test-cryptid2" parent="Animals" instance=ExtResource("4_c37vy")]
-position = Vector2(202, 65)
-
 [node name="test-cryptid3" parent="Animals" instance=ExtResource("4_c37vy")]
 position = Vector2(526, 309)
 
-[node name="Path2D" type="Path2D" parent="Animals"]
-position = Vector2(36, 319)
-curve = SubResource("Curve2D_c37vy")
+[node name="Path2D2" type="Path2D" parent="Animals"]
+curve = SubResource("Curve2D_jcwl6")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Animals/Path2D"]
-rotation = 0.025311
-script = SubResource("GDScript_c37vy")
+[node name="PathFollow2D" type="PathFollow2D" parent="Animals/Path2D2"]
+position = Vector2(178, 38)
+rotation = 1.5708
+script = SubResource("GDScript_emd62")
 
-[node name="test-cryptid4" parent="Animals/Path2D/PathFollow2D" instance=ExtResource("4_c37vy")]
+[node name="test-cryptid2" parent="Animals/Path2D2/PathFollow2D" instance=ExtResource("4_c37vy")]
+position = Vector2(1.90735e-06, 1.90735e-06)
+rotation = -1.5708
 
 [node name="wall-vertical" type="Node" parent="."]
 
@@ -381,5 +391,7 @@ shape = SubResource("RectangleShape2D_h6iaj")
 position = Vector2(72, 29)
 scale = Vector2(0.160894, 0.08981)
 texture = ExtResource("9_jcwl6")
+
+[node name="Interface" parent="." instance=ExtResource("9_h6iaj")]
 
 [connection signal="body_entered" from="Exit" to="Exit" method="_on_body_entered"]
